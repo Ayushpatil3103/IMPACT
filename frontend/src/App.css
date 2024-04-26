@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Montserrat:wght@700&family=PT+Sans&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Poppins&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan&family=Poppins&display=swap')
+;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins&display=swap')
+;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins&display=swap');
+:root {
+    /* COLORS */
+
+    --backgroundColor: #060F30;
+    --containerColor: #0c1d3e;
+    --textColor:#a3b4d9;
+    --linkColor: #fff;
+
+    --primaryColor: #0668CB;
+    --secondaryColor: #1DCEEF;
+    --complementaryColor: rgb(255, 255, 148);
+
+    
+
+    --darkText: ;
+    --lightText: rgba(57, 82, 107, 1);
+
+
+    
+
+    /* Font Families */
+    --DefaultFont:  "League Spartan", sans-serif;
+
+    /* MISC */
+    --borderRadius: 10px;
+    --headingfont:32px;
+    --contentfont:24px;
+    --subheadingfont:24px;
+    --eventfont:16px;
+
+    --buttoncolor:#0668CB;
+    --buttonfont: #aacbf4;
+}
+*{
+  margin: 0;
+  padding: 0;
+font-family: var(--DefaultFont);
+
+
+}
+h1{
+  color: #fff;
+ 
+  font-size: 64px;
+}
+h3{
+  color:var(--textColor);
+  font-size: 32px;
+}
+button {
+  color: var(--buttonfont);
+  background-color: var(--buttoncolor);
+border:#fff;
+border: solid 3px;
+  border-radius: var(--borderRadius);
+padding: 10px;
+width: 200px
+}

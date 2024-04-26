@@ -1,0 +1,8 @@
+#n {
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+}
+#n img{
+    height: auto;
+    width: 200px;
+}

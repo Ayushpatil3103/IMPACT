@@ -1,0 +1,47 @@
+#Home{
+    background-color: var(--backgroundColor);
+}
+
+#downimg img{
+  width: 100%;
+  padding: 0%;
+  margin: 0;
+}
+#aboutngo{
+    display: flex;
+    gap: 10%;
+}
+#aboutngo img {
+    height: auto;
+    width:500px ;
+}
+#vol {
+    padding-top: 150px;
+    padding-left: 3%;
+}
+#Join{
+display: flex;
+gap: 30px;
+}
+#About{
+    display: flex;
+    flex-direction: row;
+padding-left: 5%;
+padding-right: 5%;
+gap:50%;
+padding-top: 60px;
+background-color: var(--backgroundColor);
+}
+#row{
+    width: 30%;
+
+}
+h2{
+    color: antiquewhite;
+    font-size: 32px;
+   
+}
+p{
+    color: #a3b4d9;
+    font-size: 16px;
+}
