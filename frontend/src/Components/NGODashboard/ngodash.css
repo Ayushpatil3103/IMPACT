@@ -44,8 +44,10 @@
   }
   
   .Ngonav h3 {
-    color: #a3b4d9;
+    color: #fff;
     font-size: 24px;
+    margin-top: 30px;
+
   }
   
   .Ngonav form {
@@ -157,6 +159,17 @@
     margin-left: 120px;
     
   }
+  .ngo-table{
+    padding:10px 0 0 20px;
+  }
+  .ngo-t {
+    border: none; /* Remove default border */
+    border-top: 2px solid #a3b4d9; /* Add a solid border on top */
+    margin: 20px 0; /* Adjust margin as needed */
+    width: 295%; /* Set width to 95% */
+  }
+  
+  
   
   .success {
     background-color: green;

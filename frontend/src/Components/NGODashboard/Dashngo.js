@@ -213,7 +213,7 @@ function NgoProfileDashboard({ user }) {
 
       <div>
         <h3 className='ngo-posted'>Posted Activities</h3>
-        <table>
+        <table className='ngo-table'> 
           <thead>
             <tr>
               {/* Table headers */}
@@ -224,12 +224,14 @@ function NgoProfileDashboard({ user }) {
     <tr key={activity.aid}>
       {/* Display activity details */}
       <td>
+        <hr class='ngo-t'></hr>
         <p><strong>Activity Name:</strong> {activity.activityName}</p>
         <p><strong>Description:</strong> {activity.Description}</p>
         <p><strong>Date:</strong> {activity.Date}</p>
         <p><strong>Time:</strong> {activity.Time}</p>
         <p><strong>Location:</strong> {activity.Location}</p>
       </td>
+      <hr />
       {/* Display volunteers who applied for the activity */}
       <td>
         {activity.applications.map(application => (
@@ -248,7 +250,9 @@ function NgoProfileDashboard({ user }) {
       </td>
       {/* Add Delete button for the activity */}
       <td><button onClick={() => handleDelete(activity.aid)}>Delete</button></td>
+
     </tr>
+    
   ))}
 </tbody>
 
