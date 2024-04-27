@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../../supabase';
 import './ngodash.css';
-
+import logo from "../Home/images/2-removebg-preview 1.png"
 function NgoProfileDashboard({ user }) {
   const [formData, setFormData] = useState({
     activityName: '',
@@ -145,13 +145,14 @@ function NgoProfileDashboard({ user }) {
   };
 
   return (
-    <div>
-      <h2>Welcome, {user.Email}!</h2>
+    <div className='Ngonav'>
+    <img src= {logo}></img>
       <p>Name: {user.Name}</p>
       <p>City: {user.City}</p>
       <p>Type: {user.Type}</p>
 
       <div>
+      <h2>Welcome, {user.Email}!</h2>
   <h3>Create New Activity</h3>
   <form onSubmit={handleSubmit}>
     <div>

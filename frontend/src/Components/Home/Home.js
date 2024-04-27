@@ -38,7 +38,7 @@ const Home = () => {
         </div>
       </section>
       
-      <section id = "About" className="container">
+      <section id = "About" className="cor">
 
         <div id="row"  data-aos="fade-right">
             <h2>What is Impact Harbor?</h2>

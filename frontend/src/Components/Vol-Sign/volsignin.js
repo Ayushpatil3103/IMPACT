@@ -1,14 +1,15 @@
-// VolunteerSignIn.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Profiledashboard from '../VolDashboard/Dashvol';
 import { supabase } from '../../supabase';
+
 import './vol-signin-styles.css';
 
 function VolunteerSignIn() {
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [error, setError] = useState(null);
   const [loggedInUser, setLoggedInUser] = useState(null);
+  const [showHeading, setShowHeading] = useState(true); // Added state to control heading visibility
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -28,6 +29,7 @@ function VolunteerSignIn() {
       if (data) {
         // Save the logged-in user's data
         setLoggedInUser(data);
+        setShowHeading(false); // Hide the heading after successful login
       } else {
         setError('Invalid email or password');
       }
@@ -42,37 +44,40 @@ function VolunteerSignIn() {
   };
 
   return (
-    <div class ="container">
-      <h2>Volunteer Sign In</h2>
+    <>
+      {showHeading && <h2>Volunteer Sign In</h2>} {/* Render the heading only if showHeading is true */}
       {error && <p>{error}</p>}
       {loggedInUser ? (
         <Profiledashboard user={loggedInUser} />
       ) : (
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <label htmlFor="password">Password:</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-            />
-          </div>
-          <button type="submit">Sign In</button>
-        </form>
+        <div className="container">
+          <h2>Volunteer Sign in</h2>
+          <form onSubmit={handleSubmit}>
+            <div>
+              <label htmlFor="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </div>
+            <div>
+              <label htmlFor="password">Password:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+              />
+            </div>
+            <button type="submit">Sign In</button>
+          </form>
+        </div>
       )}
-    </div>
+    </>
   );
 }
 

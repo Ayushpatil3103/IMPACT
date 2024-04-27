@@ -43,13 +43,13 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
+.container h2 {
   color: var(--textColor);
   font-size: var(--headingfont);
   margin-bottom: 20px;
 }
 
-p {
+.container p {
   color: var(--textColor);
   font-size: var(--contentfont);
   margin-bottom: 10px;

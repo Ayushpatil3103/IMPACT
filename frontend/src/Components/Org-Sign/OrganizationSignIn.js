@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import NgoProfileDashboard from '../NGODashboard/Dashngo';
 import { supabase } from '../../supabase';
-import './signin-styles.css'
+import './signin-styles.css';
 
 function NgoSignIn() {
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -41,37 +41,41 @@ function NgoSignIn() {
   };
 
   return (
-    <div class="container">
-      <h2>NGO Sign In</h2>
-      {error && <p>{error}</p>}
-      {loggedInUser ? (
-        <NgoProfileDashboard user={loggedInUser} />
-      ) : (
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <label htmlFor="password">Password:</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-            />
-          </div>
-          <button type="submit">Sign In</button>
-        </form>
-      )}
-    </div>
+    <>
+      <div className="container">
+        <div className="signin-content">
+          <h2>NGO Sign In</h2>
+          {error && <p>{error}</p>}
+          {loggedInUser ? (
+            <NgoProfileDashboard user={loggedInUser} />
+          ) : (
+            <form onSubmit={handleSubmit}>
+              <div>
+                <label htmlFor="email">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <label htmlFor="password">Password:</label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                />
+              </div>
+              <button type="submit">Sign In</button>
+            </form>
+          )}
+        </div>
+      </div>
+    </>
   );
 }
 

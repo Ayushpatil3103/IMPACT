@@ -7,7 +7,7 @@ import "./navbar.css"
 function Navbaar() {
   return (
     <Navbar expand="lg"  id="n">
-      <Container>
+    
         {/* Use 'src' attribute within img tag to specify image source */}
         <Navbar.Brand href="#home"><img src={Logo} alt="Logo"></img></Navbar.Brand>
         {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
@@ -20,7 +20,7 @@ function Navbaar() {
            
         //   </Nav> */}
         {/* // </Navbar.Collapse> */}
-      </Container>
+    
     </Navbar>
   );
 }
