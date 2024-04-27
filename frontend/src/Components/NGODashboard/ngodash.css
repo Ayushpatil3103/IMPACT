@@ -1,0 +1,164 @@
+/* .ngo-profile-dashboard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Ngonav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color:#0c1d3e;
+}
+.logo img {
+    height: 70px;
+  } */
+  .ngo-profile-dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .Ngonav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #0c1d3e;
+  }
+  
+  .logo img {
+    height: 70px;
+  }
+  
+  .Ngonav p {
+    color: #a3b4d9;
+    font-size: 16px;
+  }
+  
+  .Ngonav h2 {
+    color: #a3b4d9;
+    font-size: 32px;
+  }
+  
+  .Ngonav h3 {
+    color: #a3b4d9;
+    font-size: 24px;
+  }
+  
+  .Ngonav form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .Ngonav form div {
+    margin-bottom: 10px;
+  }
+  
+  .Ngonav form label {
+    color: #a3b4d9;
+  }
+  
+  .Ngonav form input,
+  .Ngonav form textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #a3b4d9;
+  }
+  
+  .Ngonav form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .Ngonav form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .Ngonav div:nth-child(3) {
+    margin-top: 20px;
+  }
+  
+  .Ngonav div:nth-child(3) h3 {
+    margin-bottom: 10px;
+    color: #a3b4d9;
+  }
+  
+  .Ngonav div:nth-child(3) table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .Ngonav div:nth-child(3) th,
+  .Ngonav div:nth-child(3) td {
+    padding: 10px;
+    border-bottom: 2px solid #fff;
+    color: #a3b4d9;
+  }
+  
+  .Ngonav div:nth-child(3) th {
+    color: #f0f0f0;
+  }
+  
+  .Ngonav div:nth-child(3) button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+  }
+  
+  .Ngonav div:nth-child(3) button:hover {
+    background-color: #0056b3;
+  }
+  .ngo-desc{
+    padding-left:80px;
+  }
+  .ngo-activity{
+    padding:10px;
+  }
+  .ngo-head{
+    padding: 20px ;
+    padding-left: 70px;
+
+
+  }
+  .ngo-time{
+    padding-right:40px;
+  }
+  .ngo-loc{
+    padding: 20px;
+  }
+  .ngo-submit {
+    padding: 10px 20px;
+    margin-left: 400px; /* Adjusted margin to move the button 20px to the right */
+  }
+  .Ngonav form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:10px;
+    width: 100%;
+    margin-left: 10px; /* Adjusted margin to move the form 20px to the right */
+  }
+  .Ngonav form button{
+    margin-left: 120px;
+    
+  }
+  
+  .success {
+    background-color: green;
+  }
+  

@@ -145,17 +145,19 @@ function NgoProfileDashboard({ user }) {
   };
 
   return (
+    <div className='ngo-profile-dashboard'>
     <div className='Ngonav'>
-    <img src= {logo}></img>
+      <div className='logo'>
+    <img src= {logo}></img></div>
       <p>Name: {user.Name}</p>
       <p>City: {user.City}</p>
       <p>Type: {user.Type}</p>
 
       <div>
       <h2>Welcome, {user.Email}!</h2>
-  <h3>Create New Activity</h3>
+  <h3 className='ngo-head'>Create New Activity</h3>
   <form onSubmit={handleSubmit}>
-    <div>
+    <div className='ngo-activity'>
       <label htmlFor="activityName">Activity Name:</label>
       <input
         type="text"
@@ -165,8 +167,8 @@ function NgoProfileDashboard({ user }) {
         onChange={handleChange}
       />
     </div>
-    <div>
-      <label htmlFor="Description">Description:</label>
+    <div className='ngo-desc'>
+      <label className='label-desc' htmlFor="Description">Description:</label>
       <textarea
         id="Description"
         name="Description"
@@ -184,7 +186,7 @@ function NgoProfileDashboard({ user }) {
         onChange={handleChange}
       />
     </div>
-    <div>
+    <div class='ngo-time'>
       <label htmlFor="Time">Time:</label>
       <input
         type="time"
@@ -194,7 +196,7 @@ function NgoProfileDashboard({ user }) {
         onChange={handleChange}
       />
     </div>
-    <div>
+    <div className='ngo-loc'>
       <label htmlFor="Location">Location:</label>
       <input
         type="text"
@@ -204,13 +206,13 @@ function NgoProfileDashboard({ user }) {
         onChange={handleChange}
       />
     </div>
-    <button type="submit">Create Activity</button>
+    <button className='ngo-submit' type="submit">Create Activity</button>
   </form>
 </div>
 
 
       <div>
-        <h3>Posted Activities</h3>
+        <h3 className='ngo-posted'>Posted Activities</h3>
         <table>
           <thead>
             <tr>
@@ -252,6 +254,7 @@ function NgoProfileDashboard({ user }) {
 
         </table>
       </div>
+    </div>
     </div>
   );
 }
