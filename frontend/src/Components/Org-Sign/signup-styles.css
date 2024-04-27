@@ -5,24 +5,36 @@
   height: 100vh;
 }
 
+
+
 .centered-form form {
   width: 350px;
   padding: 30px;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: #0c1d3e;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .signup-heading {
   text-align: center;
-  color: #333;
+  color: #fff;
   margin-bottom: 20px;
+  position: relative;
+  left:200px;
+  top:-270px;
+}
+
+form{
+  position: relative;
+  right:60px;
+
 }
 
 .centered-form label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 18px;
   color: #555;
+
 }
 
 .centered-form input {
@@ -33,7 +45,10 @@
   border-radius: 6px;
   font-size: 16px;
 }
-
+.input-field{
+  position: relative;
+  left:-60px;
+}
 .centered-form button {
   width: 100%;
   padding: 12px;
@@ -44,6 +59,9 @@
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  position: relative;
+  left:-48px;
+  top:10px;
 }
 
 .centered-form button:hover {

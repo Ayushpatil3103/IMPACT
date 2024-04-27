@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Profiledashboard from '../VolDashboard/Dashvol';
 import { supabase } from '../../supabase';
+import './vol-signin-styles.css';
 
 function VolunteerSignIn() {
   const [formData, setFormData] = useState({ email: '', password: '' });
@@ -41,7 +42,7 @@ function VolunteerSignIn() {
   };
 
   return (
-    <div>
+    <div class ="container">
       <h2>Volunteer Sign In</h2>
       {error && <p>{error}</p>}
       {loggedInUser ? (

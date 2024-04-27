@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../../supabase';
+import './dashvol.css';
 
 function Profiledashboard({ user }) {
   const [activities, setActivities] = useState([]);
@@ -46,7 +47,8 @@ function Profiledashboard({ user }) {
   };
 
   return (
-    <div>
+    <div class="container">
+     
       <h2>Welcome, {user.email}!</h2>
       <p>Name: {user.Name}</p>
       <p>City: {user.City}</p>
@@ -81,6 +83,7 @@ function Profiledashboard({ user }) {
         </tbody>
       </table>
     </div>
+
   );
 }
 

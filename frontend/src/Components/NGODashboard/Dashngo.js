@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '../../supabase';
+import './ngodash.css';
 
 function NgoProfileDashboard({ user }) {
   const [formData, setFormData] = useState({

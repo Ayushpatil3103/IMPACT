@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins&display=swap');
+
+:root {
+  /* COLORS */
+  --backgroundColor: #060f30;
+  --containerColor: #0c1d3e;
+  --textColor: #fff;
+  --linkColor: #ffff;
+  --primaryColor: #0668CB;
+  --secondaryColor: #1DCEEF;
+  --complementaryColor: rgb(255, 255, 148);
+  --darkText: ;
+  --lightText: rgba(57, 82, 107, 1);
+  /* Font Families */
+  --DefaultFont: 'League Spartan', sans-serif;
+  /* MISC */
+  --borderRadius: 5px;
+  --headingfont: 24px;
+  --contentfont: 16px;
+  --subheadingfont: 16px;
+  --eventfont: 14px;
+  --buttoncolor: #0668CB;
+  --buttonfont: #aacbf4;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--DefaultFont);
+}
+
+body {
+  background-color: var(--backgroundColor);
+}
+
+.container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: var(--borderRadius);
+  background-color: var(--containerColor);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h2 {
+  color: var(--textColor);
+  font-size: var(--headingfont);
+  margin-bottom: 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+p {
+  color: var(--textColor);
+  font-size: var(--contentfont);
+  margin-bottom: 10px;
+}
+
+label {
+  color: var(--textColor);
+  font-size: var(--subheadingfont);
+  margin-bottom: 5px;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: var(--borderRadius);
+  border: 1px solid var(--textColor);
+  background-color: var(--containerColor);
+  color: var(--textColor);
+  font-size: var(--contentfont);
+}
+
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: var(--borderRadius);
+  border: 1px solid var(--textColor);
+  background-color: var(--containerColor);
+  color: var(--textColor);
+  font-size: var(--contentfont);
+  resize: vertical;
+}
+
+button[type='submit'] {
+  color: var(--buttonfont);
+  background-color: var(--buttoncolor);
+  border: none;
+  border-radius: var(--borderRadius);
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  font-size: var(--subheadingfont);
+}
+
+button[type='submit']:hover {
+  background-color: #054e9f;
+}

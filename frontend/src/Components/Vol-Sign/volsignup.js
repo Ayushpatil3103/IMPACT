@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
  // Import your Supabase client
 import { supabase } from '../../supabase';
+import './vol-signup-styles.css';
+
 function VolunteerSignup() {
   // State variables to hold form data
   const [formData, setFormData] = useState({
@@ -51,7 +53,7 @@ function VolunteerSignup() {
   };
 
   return (
-    <div>
+    <div class ="container">
       <h2>Sign Up</h2>
       {error && <p>{error}</p>}
       <form onSubmit={handleSubmit}>

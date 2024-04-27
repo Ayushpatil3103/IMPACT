@@ -50,11 +50,11 @@ function OrganizationSignup() {
 
   return (
     
-    <div className="centered-form"> {/* Added class for centering */}
+    <div class="container" className="centered-form"> {/* Added class for centering */}
       <h2  className="signup-heading">Organization Sign Up</h2>
       {error && <p>{error}</p>}
-      <form onSubmit={handleSubmit}>
-        <div>
+      <form  onSubmit={handleSubmit}>
+        <div className='input-field'>
           <label htmlFor="name">Name:</label>
           <input
             type="text"
@@ -64,7 +64,7 @@ function OrganizationSignup() {
             onChange={handleChange}
           />
         </div>
-        <div>
+        <div className='input-field'>
           <label htmlFor="city">City:</label>
           <input
             type="text"
@@ -74,7 +74,7 @@ function OrganizationSignup() {
             onChange={handleChange}
           />
         </div>
-        <div>
+        <div className='input-field'>
           <label htmlFor="email">Email:</label>
           <input
             type="email"
@@ -84,7 +84,7 @@ function OrganizationSignup() {
             onChange={handleChange}
           />
         </div>
-        <div>
+        <div className='input-field'>
           <label htmlFor="password">Password:</label>
           <input
             type="password"
@@ -94,7 +94,7 @@ function OrganizationSignup() {
             onChange={handleChange}
           />
         </div>
-        <div>
+        <div className='input-field'>
           <label htmlFor="type">Type:</label>
           <input
             type="text"
