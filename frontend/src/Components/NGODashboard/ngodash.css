@@ -9,6 +9,10 @@
   background-color:  #0c1d3e;
   color: #fff;
 }
+.green-button {
+  background-color: green;
+  color: white;
+}
 
 .logo img {
   width: 100px; /* Adjust as needed */

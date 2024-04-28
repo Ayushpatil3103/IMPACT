@@ -3,6 +3,10 @@
     flex-direction: column;
     align-items: center;
   }
+  .applied-button {
+    background-color: green; 
+  }
+  
   
   .navbar {
     display: flex;

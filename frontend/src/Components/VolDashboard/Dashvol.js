@@ -6,6 +6,7 @@ import logo from "../Home/images/2-removebg-preview 1.png";
 function Profiledashboard({ user }) {
   const [activities, setActivities] = useState([]);
   const [showProfile, setShowProfile] = useState(false);
+  const [appliedActivities, setAppliedActivities] = useState([]);
 
   useEffect(() => {
     async function fetchActivities() {
@@ -40,6 +41,10 @@ function Profiledashboard({ user }) {
       if (error) {
         throw error;
       }
+
+      
+      setAppliedActivities(prevAppliedActivities => [...prevAppliedActivities, activityName]);
+
       console.log('Application submitted successfully');
     } catch (error) {
       console.error('Error submitting application:', error.message || error);
@@ -96,9 +101,13 @@ function Profiledashboard({ user }) {
                   <td>{activity.Time}</td>
                   <td>{activity.Location}</td>
                   <td>
-                    <button className="apply-button" onClick={() => handleApply(activity['Activity Name-BY NGO'])}>
-                      Apply
-                    </button>
+                  <button 
+  style={appliedActivities.includes(activity['Activity Name-BY NGO']) ? { backgroundColor: 'green', /* any other styles */ } : null}
+  onClick={() => handleApply(activity['Activity Name-BY NGO'])}
+>
+  {appliedActivities.includes(activity['Activity Name-BY NGO']) ? 'Applied' : 'Apply'}
+</button>
+
                   </td>
                 </tr>
               ))}

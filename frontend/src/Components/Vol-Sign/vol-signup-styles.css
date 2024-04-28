@@ -33,6 +33,10 @@
 body {
   background-color: var(--backgroundColor);
 }
+.green-button {
+  background-color: green;
+  color: white;
+}
 
 .container {
   max-width: 400px;
