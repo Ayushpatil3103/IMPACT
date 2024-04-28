@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import "./home.css"
 import Navbaar from '../Navbar/Navbar'
 import RankTable from '../Rank/Rank'
+import WildlifeSanctuariesTable from './Wild'
 import Footer from '../Footer/Footer'
 const Home = () => {
   return (
@@ -52,6 +53,7 @@ const Home = () => {
 
    </section>
    <RankTable/>
+   <WildlifeSanctuariesTable/>
    <Footer/>
     </div>
   )

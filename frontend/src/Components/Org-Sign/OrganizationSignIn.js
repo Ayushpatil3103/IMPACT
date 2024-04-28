@@ -8,6 +8,7 @@ function NgoSignIn() {
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [error, setError] = useState(null);
   const [loggedInUser, setLoggedInUser] = useState(null);
+  const [loggedIn, setLoggedIn] = useState(false); // New state to track if logged in
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -27,6 +28,7 @@ function NgoSignIn() {
       if (data) {
         // Save the logged-in user's data
         setLoggedInUser(data);
+        setLoggedIn(true); // Set logged in state to true
       } else {
         setError('Invalid email or password');
       }
@@ -42,13 +44,11 @@ function NgoSignIn() {
 
   return (
     <>
-      <div className="container">
-        <div className="signin-content">
-          <h2>NGO Sign In</h2>
-          {error && <p>{error}</p>}
-          {loggedInUser ? (
-            <NgoProfileDashboard user={loggedInUser} />
-          ) : (
+      {!loggedIn && ( // Only render sign-in form if not logged in
+        <div className="container">
+          <div className="signin-content">
+            <h2>NGO Sign In</h2>
+            {error && <p>{error}</p>}
             <form onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="email">Email:</label>
@@ -72,9 +72,10 @@ function NgoSignIn() {
               </div>
               <button type="submit">Sign In</button>
             </form>
-          )}
+          </div>
         </div>
-      </div>
+      )}
+      {loggedIn && <NgoProfileDashboard user={loggedInUser} />} {/* Render dashboard if logged in */}
     </>
   );
 }

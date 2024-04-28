@@ -23,19 +23,17 @@ function Profiledashboard({ user }) {
     fetchActivities();
   }, []);
 
-  const handleApply = async (activityId) => {
+  const handleApply = async (activityName) => {
     try {
       const volunteerId = user.volid;
       const volunteerName = user.Name;
-      const activityNameByNGO = activities.find(activity => activity.id === activityId)['Activity Name-BY NGO'];
       
       // Insert into Applications table
       const { error } = await supabase.from('Applications').insert([
         {
-          activity_id: activityId,
           Volunteer_id: volunteerId,
-          Volunteer_name: volunteerName, // Set Volunteer_name column
-          Activity_name: activityNameByNGO // Set Activity_name column
+          Volunteer_name: volunteerName,
+          Activity_name: activityName
         }
       ]);
       
@@ -91,14 +89,14 @@ function Profiledashboard({ user }) {
             </thead>
             <tbody>
               {activities.map(activity => (
-                <tr key={activity.id}>
+                <tr key={activity['Activity Name-BY NGO']}>
                   <td>{activity['Activity Name-BY NGO']}</td>
                   <td>{activity.Description}</td>
                   <td>{activity.Date}</td>
                   <td>{activity.Time}</td>
                   <td>{activity.Location}</td>
                   <td>
-                    <button className="apply-button" onClick={() => handleApply(activity.id)}>
+                    <button className="apply-button" onClick={() => handleApply(activity['Activity Name-BY NGO'])}>
                       Apply
                     </button>
                   </td>
@@ -113,4 +111,3 @@ function Profiledashboard({ user }) {
 }
 
 export default Profiledashboard;
-

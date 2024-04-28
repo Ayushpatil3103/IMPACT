@@ -1,177 +1,220 @@
-/* .ngo-profile-dashboard{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* ngodash.css */
+
+/* Navbar */
+.Ngonav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color:  #0c1d3e;
+  color: #fff;
 }
-.Ngonav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 10px;
-    background-color:#0c1d3e;
-}
+
 .logo img {
-    height: 70px;
-  } */
-  .ngo-profile-dashboard {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
+  width: 100px; /* Adjust as needed */
+  height: auto;
+}
+
+.profile-button button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.profile-button button:hover {
+  background-color: #45a049;
+}
+
+/* Welcome message */
+.ngo-profile-dashboard h2 {
+  margin-top: 20px;
+}
+
+/* Create New Activity section */
+.ngo-head {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.ngo-activity {
+  margin-bottom: 10px;
+}
+
+.ngo-desc {
+  margin-bottom: 10px;
+}
+
+.ngo-time {
+  margin-bottom: 10px;
+}
+
+.ngo-loc {
+  margin-bottom: 20px;
+}
+
+.ngo-submit {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.ngo-submit:hover {
+  background-color: #45a049;
+}
+
+/* Posted Activities section */
+.ngo-posted {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.ngo-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ngo-table th, .ngo-table td {
+  border: 3px solid #ddd;
+  padding: 8px;
+}
+
+.ngo-table th {
+  background-color:#0c1d3e;
+  text-align: left;
+}
+
+.ngo-t {
+  border-top: 1px solid #ddd;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
   .Ngonav {
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 10px;
-    background-color: #0c1d3e;
+    align-items: stretch;
   }
-  
-  .logo img {
-    height: 70px;
-  }
-  
-  .Ngonav p {
-    color: #a3b4d9;
-    font-size: 16px;
-  }
-  
-  .Ngonav h2 {
-    color: #a3b4d9;
-    font-size: 32px;
-  }
-  
-  .Ngonav h3 {
-    color: #fff;
-    font-size: 24px;
-    margin-top: 30px;
 
-  }
-  
-  .Ngonav form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .profile-button button {
     width: 100%;
+    margin-top: 10px;
   }
-  
-  .Ngonav form div {
-    margin-bottom: 10px;
-  }
-  
-  .Ngonav form label {
-    color: #a3b4d9;
-  }
-  
-  .Ngonav form input,
-  .Ngonav form textarea {
-    width: 100%;
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #a3b4d9;
-  }
-  
-  .Ngonav form button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .Ngonav form button:hover {
-    background-color: #0056b3;
-  }
-  
-  .Ngonav div:nth-child(3) {
-    margin-top: 20px;
-  }
-  
-  .Ngonav div:nth-child(3) h3 {
-    margin-bottom: 10px;
-    color: #a3b4d9;
-  }
-  
-  .Ngonav div:nth-child(3) table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .Ngonav div:nth-child(3) th,
-  .Ngonav div:nth-child(3) td {
-    padding: 10px;
-    border-bottom: 2px solid #fff;
-    color: #a3b4d9;
-  }
-  
-  .Ngonav div:nth-child(3) th {
-    color: #f0f0f0;
-  }
-  
-  .Ngonav div:nth-child(3) button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
+}
+.ngo-profile-dashboard {
+  text-align: center;
+}
 
+.Ngonav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
 
-  }
-  
-  .Ngonav div:nth-child(3) button:hover {
-    background-color: #0056b3;
-  }
-  .ngo-desc{
-    padding-left:80px;
-  }
-  .ngo-activity{
-    padding:10px;
-  }
-  .ngo-head{
-    padding: 20px ;
-    padding-left: 70px;
+.logo img {
+  max-width: 100px;
+}
+
+.profile-button {
+  margin-right: 20px;
+}
+
+.profile-section {
+  margin-top: 20px;
+}
+
+.ngo-head {
+  margin-top: 40px;
+}
+
+.create-activity-container {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.create-activity-form {
+background-color: #0c1d3e;
+  border-radius: 10px;
+  padding-top: 10px 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.create-activity-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.create-activity-form input,
+.create-activity-form textarea {
+  width: 60%;
+ padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.create-activity-form button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.create-activity-form button:hover {
+  background-color: #45a049;
+}
+.center-table {
+  text-align: center;
+}
+
+.volunteer-table {
+  border-collapse: collapse;
+  margin: auto;
+  border: 1px solid #fff;
+  width: 50%;
+}
+
+.volunteer-table th, .volunteer-table td {
+  border: 1px solid #fff;
+  padding: 8px;
+}
+
+.ngo-table {
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  text-align: center;
+}
+
+.ngo-table th,
+.ngo-table td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
 
 
-  }
-  .ngo-time{
-    padding-right:40px;
-  }
-  .ngo-loc{
-    padding: 20px;
-  }
-  .ngo-submit {
-    padding: 10px 20px;
-    margin-left: 400px; /* Adjusted margin to move the button 20px to the right */
-  }
-  .Ngonav form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding:10px;
-    width: 100%;
-    margin-left: 10px; /* Adjusted margin to move the form 20px to the right */
-  }
-  .Ngonav form button{
-    margin-left: 120px;
-    
-  }
-  .ngo-table{
-    padding:10px 0 0 20px;
-  }
-  .ngo-t {
-    border: none; /* Remove default border */
-    border-top: 2px solid #a3b4d9; /* Add a solid border on top */
-    margin: 20px 0; /* Adjust margin as needed */
-    width: 295%; /* Set width to 95% */
-  }
-  
-  
-  
-  .success {
-    background-color: green;
-  }
-  
+
+
+
+.ngo-table button {
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ngo-table button:hover {
+  background-color: #d32f2f;
+}

@@ -1,0 +1,38 @@
+.centered-table {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 3%; 
+    text-align: center;/* Center the table */
+  }
+  .centered-table h2{
+    text-align: center;
+    color: #dddddd;
+  }
+  .table-container {
+    width: 80%; /* Set the width of the container */
+    
+       margin: auto; /* Horizontally center the table */
+       
+  }
+  .bordered-table {
+    border-collapse: collapse; /* Collapse table borders */
+    width: 100%; /* Adjust the width as needed */
+  }
+  
+  .bordered-table th, .bordered-table td {
+    border: 1px solid #dddddd; /* Add borders to table cells */
+    padding: 8px; /* Add padding to table cells */
+  }
+  
+  .bordered-table th {
+    background-color:#060F30; /* Add background color to table headers */
+  }
+  
+  .bordered-table tr:nth-child(even) {
+    background-color: #060F30; /* Add alternate row background color */
+  }
+  
+  .bordered-table tr:hover {
+    background-color:#060F30; /* Highlight row on hover */
+  }
+  
