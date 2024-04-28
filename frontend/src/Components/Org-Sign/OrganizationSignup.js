@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { supabase } from '../../supabase';
 import './signup-styles.css';
+
 function OrganizationSignup() {
-  // State variables to hold form data
+  const navigate = useNavigate(); 
+
   const [formData, setFormData] = useState({
     name: '',
     city: '',
@@ -12,12 +15,10 @@ function OrganizationSignup() {
   });
   const [error, setError] = useState(null);
 
-  // Function to handle form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
-    
+
     try {
-      // Insert data into the 'NGO' table
       const { data, error } = await supabase
         .from('NGO')
         .insert([
@@ -30,30 +31,29 @@ function OrganizationSignup() {
           },
         ])
         .select();
-      
+
       if (error) {
         setError(error.message || 'An error occurred while signing up.');
       } else {
-        // Handle successful sign-up
         console.log('Sign-up successful:', data);
+      
+        navigate('/signin');
       }
     } catch (error) {
       setError(error.message || 'An error occurred while signing up.');
     }
   };
 
-  // Function to handle form input changes
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
 
   return (
-    
-    <div class="container" className="centered-form"> {/* Added class for centering */}
-      <h2  className="signup-heading">Organization Sign Up</h2>
+    <div className="container centered-form">
+      <h2 className="signup-heading">Organization SignUp</h2>
       {error && <p>{error}</p>}
-      <form  onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <div className='input-field'>
           <label htmlFor="name">Name:</label>
           <input

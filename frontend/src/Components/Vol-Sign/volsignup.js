@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
- // Import your Supabase client
 import { supabase } from '../../supabase';
 import './vol-signup-styles.css';
+import { useNavigate } from 'react-router-dom';
 
 function VolunteerSignup() {
-  // State variables to hold form data
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     name: '',
     city: '',
@@ -15,12 +16,10 @@ function VolunteerSignup() {
   });
   const [error, setError] = useState(null);
 
-  // Function to handle form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
-    
+
     try {
-      // Insert data into the 'Volunteers' table
       const { data, error } = await supabase
         .from('Volunteers')
         .insert([
@@ -34,26 +33,26 @@ function VolunteerSignup() {
           },
         ])
         .select();
-      
+
       if (error) {
         setError(error.message || 'An error occurred while signing up.');
       } else {
-        // Handle successful sign-up
         console.log('Sign-up successful:', data);
+        // Redirect to the sign-in page after successful signup
+        navigate('/vol/signin');
       }
     } catch (error) {
       setError(error.message || 'An error occurred while signing up.');
     }
   };
 
-  // Function to handle form input changes
   const handleChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
 
   return (
-    <div class ="container">
+    <div className="container">
       <h2>Sign Up</h2>
       {error && <p>{error}</p>}
       <form onSubmit={handleSubmit}>
