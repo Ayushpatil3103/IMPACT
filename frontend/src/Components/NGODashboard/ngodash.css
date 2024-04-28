@@ -9,9 +9,13 @@
   background-color:  #0c1d3e;
   color: #fff;
 }
-.green-button {
-  background-color: green;
-  color: white;
+textarea{
+  width:100px;
+}
+
+.create-activity-form{
+  width:550px;
+  margin-left:210px ;
 }
 
 .logo img {

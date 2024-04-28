@@ -102,7 +102,7 @@ function Profiledashboard({ user }) {
                   <td>{activity.Location}</td>
                   <td>
                   <button 
-  style={appliedActivities.includes(activity['Activity Name-BY NGO']) ? { backgroundColor: 'green', /* any other styles */ } : null}
+  style={appliedActivities.includes(activity['Activity Name-BY NGO']) ? { backgroundColor: 'green',  } : null}
   onClick={() => handleApply(activity['Activity Name-BY NGO'])}
 >
   {appliedActivities.includes(activity['Activity Name-BY NGO']) ? 'Applied' : 'Apply'}

@@ -196,7 +196,9 @@ function NgoProfileDashboard({ user }) {
               onChange={handleChange}
             />
           </div>
-          <button className='ngo-submit' type="submit">Create Activity</button>
+          <button style={{ width: '200px', height: '50px' }}  className='ngo-submit' type="submit">Create Activity</button>
+        <br />
+        <br />
         </form>
       </div>
 
@@ -216,7 +218,7 @@ function NgoProfileDashboard({ user }) {
               <tr key={activity.aid}>
                 <td>{activity['Activity Name-BY NGO']}</td>
                 <td>{activity.Date}</td>
-                <td><button onClick={() => handleDelete(activity.aid)}>Delete</button></td>
+                <td><button  onClick={() => handleDelete(activity.aid)}>Delete</button></td>
               </tr>
             ))}
           </tbody>
